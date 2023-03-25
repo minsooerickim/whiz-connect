@@ -14,9 +14,9 @@ if [ -e ~/.ssh/id_rsa.pub ] || [ -e ~/.ssh/id_ed25519.pub ]; then
         echo "detected existing id_rsa.pub"
     fi
 else
-    echo "Choose the type of SSH key to generate:"
-    echo "1) id_rsa (RSA)"
-    echo "2) id_ed25519 (EdDSA)"
+    echo -e "\e[1mChoose the type of SSH key to generate:\e[0m"
+    echo -e "1) \e[32mid_rsa (RSA)\e[0m"
+    echo -e "2) \e[32mid_ed25519 (EdDSA)\e[0m"
     echo
     echo -n "Enter your choice (1 or 2): "
     read choice
@@ -33,9 +33,8 @@ else
     fi
 
     ssh-keygen -t "$key_type"
-    echo "SSH key successfully generated."
 
-    echo "$key_type successfully generated!"
+    echo -e "\e[32m$key_type successfully generated!\e[0m"
 fi
 
 # get user and remote host
@@ -51,6 +50,6 @@ else
 fi
 
 # done
-echo "whiz whiz!!"
+echo -e "\e[32mwhiz whiz!!\e[0m"
 
 exit
