@@ -28,6 +28,15 @@ To use WhizConnect, simply run the following command in your terminal:
 
     whiz_connect
 
+## Encryption Method
+`id_ed25519` and `id_rsa` are two different types of cryptographic keys used for authentication in Secure Shell (SSH) connections.
+
+`id_ed25519` is a newer type of key that uses the Ed25519 algorithm, which is a high-security elliptic curve algorithm. It is generally considered more secure and faster than the older RSA algorithm. Ed25519 keys are shorter than RSA keys, making them more efficient for network communication.
+
+`id_rsa`, on the other hand, is an older type of key that uses the RSA algorithm. It is still widely used and supported, but it is considered less secure than Ed25519. RSA keys tend to be longer than Ed25519 keys, which can make them slower to use in network communication.
+
+Both types of keys can be used for SSH authentication, but it is generally recommended to use `id_ed25519` if your SSH client and server support it, because it is considered more secure and efficient. However, if your SSH client or server does not support Ed25519, then RSA keys are still a good choice for secure authentication.
+
 ## Motivation 😓
 
 My university has MANY MANY remote servers (bolt, sledge, hammer, cs100, many MORE). It gets SUPER ANNOYING having to type in your password **EVERY TIME** you want to `ssh` in or `push`/`pull`/`fetch`, etc.
