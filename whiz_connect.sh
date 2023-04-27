@@ -39,7 +39,7 @@ fi
 
 # get user and remote host
 echo
-echo "type in the ssh command to your remote server (ex. ssh mkim410@bolt.cs.ucr.edu)"
+echo "type in the ssh command to your remote server (ex. mkim410@bolt.cs.ucr.edu)"
 read ssh_remote_host
 
 # move public key to remote server
